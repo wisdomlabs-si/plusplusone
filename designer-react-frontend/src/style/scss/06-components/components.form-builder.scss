@@ -1,0 +1,8 @@
+.c-ScrollContainer {
+  // TODO Should be component wrapper I guess...
+  // Parent must have `display: flex` and `min-height: 0`
+  height: 100%;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  background-color: var(--color-surface-2);
+}

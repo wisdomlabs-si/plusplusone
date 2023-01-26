@@ -1,0 +1,190 @@
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  height: 32px;
+  line-height: initial;
+  color: var(--color-secondary);
+  font-size: var(--font-normal);
+  font-weight: var(--font-bold);
+  border-radius: var(--base-radius);
+  margin: 0;
+  padding-left: calc(var(--base-spacing) * 3);
+  padding-right: calc(var(--base-spacing) * 3);
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  &--primary {
+    background-color: var(--color-highlight);
+    color: var(--color-btn-light);
+  }
+
+  &--secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-btn-light);
+  }
+
+  &--tertiary {
+    background-color: transparent;
+    border: solid 1px var(--color-highlight);
+    color: var(--color-highlight);
+  }
+
+  &--tertiary-danger {
+    background-color: transparent;
+    border: solid 1px var(--color-negative);
+    color: var(--color-negative);
+  }
+
+  &--danger {
+    background-color: var(--color-negative);
+    color: #ffffff;
+  }
+
+  &--ghost {
+    background-color: transparent;
+    color: var(--color-text);
+    &:hover {
+      background-color: var(--color-tertiary);
+    }
+  }
+
+  &--ghost-simple {
+    padding-left: calc(var(--base-spacing) * 1);
+    padding-right: calc(var(--base-spacing) * 1);
+    background-color: transparent;
+    font-weight: var(--font-normal);
+    color: var(--color-text);
+    &:hover {
+      //TODO Tomaz: fix color names
+      background-color: var(--color-border);
+    }
+  }
+
+  &--icon {
+    height: 32px;
+    flex: 0 0 32px;
+    padding-left: 0;
+    padding-right: 0;
+
+    &:hover {
+      > svg {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  &--round {
+    border-radius: 50%;
+    height: 24px;
+    flex: 0 0 24px;
+    padding: 0;
+    background-color: #6166f1;
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  &--small {
+    height: 24px;
+    font-size: var(--font-small);
+    font-weight: var(--font-normal);
+    padding-left: var(--base-spacing);
+    padding-right: var(--base-spacing);
+
+    &.c-btn--icon {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+      padding-left: 0;
+      padding-right: 0;
+
+      > svg {
+        width: 16px;
+        height: 16px;
+        display: inline;
+      }
+    }
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    display: inline;
+  }
+
+  &--icon {
+    width: 32px;
+    height: 32px;
+    background-color: transparent;
+    border: 0;
+    flex-direction: column;
+    position: relative;
+    color: var(--color-secondary);
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    &.alert { // TODO This should probably be helper class
+      &:before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--color-negative);
+        position: absolute;
+        right: 8px;
+        top: 8px;
+      }
+    }
+  }
+
+  &--icon-text {
+    flex-direction: column;
+    color: var(--color-secondary);
+    min-width: 56px;
+
+    > svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    > span {
+      font-size: var(--font-small);
+      margin-top: 5px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__toggle-button {
+    display: inline-flex;
+    align-items: center;
+    border-radius: var(--base-radius);
+    min-width: 40px;
+    height: calc(var(--base-spacing) * 3);
+    color: var(--color-text-light);
+    border: solid 1px $color-border-light;
+    background-color: #ffffff;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: var(--base-spacing) center;
+
+    &--play {
+      background-image: url("../../assets/svg/Play.svg");
+    }
+
+    &--loader {
+      background-image: url("../../assets/svg/Loader.svg");
+    }
+  }
+
+}

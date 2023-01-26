@@ -1,0 +1,16 @@
+.c-Label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: calc(var(--base-spacing) * 2);
+
+  > input {
+    margin: 0;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__name {
+    margin-left: 4px
+  }
+}

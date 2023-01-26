@@ -1,0 +1,53 @@
+.c-Snackbar {
+  --snackbar-bg: var(--color-text);
+  --snackbar-text: var(--color-surface-1);
+
+  width: 334px;
+  font-size: 12px;
+  border-radius: var(--base-radius);
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  z-index: 100;
+  min-height: 48px;
+  transform: translateX(-50%);
+
+  &__text {
+    padding: calc(var(--base-spacing) * 2);
+    line-height: 18px;
+  }
+
+  &__actions {
+    margin-right: var(--base-spacing);
+  }
+
+  &__action {
+    > button {
+      height: initial;
+      color: var(--color-highlight-50);
+      text-transform: uppercase;
+      padding: var(--base-spacing) calc(var(--base-spacing) * 2);
+    }
+  }
+
+  &__close {
+    button {
+      svg {
+        color: var(--snackbar-text);
+        opacity: .7;
+        &:hover {
+          color: var(--snackbar-text);
+          opacity: 1;
+        }
+      }
+
+    }
+  }
+
+  &--default {
+    background-color: var(--snackbar-bg);
+    color: var(--snackbar-text);
+  }
+
+}

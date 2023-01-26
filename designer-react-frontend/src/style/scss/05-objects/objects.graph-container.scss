@@ -1,0 +1,18 @@
+.o-GraphContainer {
+  display: grid;
+  grid-template-areas:
+      "graph-search"
+      "graph-canvas";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  position: relative;
+  height: 100%;
+
+  &__graph-search {
+    grid-area: graph-search;
+  }
+
+  &__canvas {
+    grid-area: graph-canvas;
+  }
+}

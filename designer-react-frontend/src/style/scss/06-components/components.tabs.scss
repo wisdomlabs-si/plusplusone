@@ -1,0 +1,49 @@
+.c-Tabs {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: solid 1px var(--color-border);
+  height: 40px;
+
+  &__tab {
+    color: var(--color-secondary);
+    font-size: var(--font-small);
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 100%;
+    padding-left: calc(var(--base-spacing) * 2);
+    padding-right: calc(var(--base-spacing) * 2);
+
+    .icon {
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--selected {
+      color: var(--color-primary);
+      position: relative;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: var(--color-highlight);
+      }
+    }
+
+    &--disabled {
+      opacity: .4;
+      pointer-events: none;
+    }
+  }
+
+  &__section {
+    display: flex;
+    padding: calc(var(--base-spacing) * 2);
+  }
+}

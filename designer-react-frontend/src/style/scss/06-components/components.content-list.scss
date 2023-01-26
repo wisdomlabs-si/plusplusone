@@ -1,0 +1,26 @@
+.c-ContentList {
+  display: grid;
+  grid-template-columns: 24px 1fr 1fr 24px;
+  grid-column-gap: 16px;
+
+  &__order {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-border);
+    color: var(--color-text);
+    font-size: 10px;
+    border-radius: 3px;
+  }
+
+  &__title {
+    color: var(--color-highlight);
+    font-weight: var(--font-bold);
+  }
+
+  &__button {
+    font-size: 16px;
+  }
+}

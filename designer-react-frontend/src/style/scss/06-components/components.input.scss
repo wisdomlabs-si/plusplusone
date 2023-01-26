@@ -1,0 +1,47 @@
+.c-input-container {
+  padding-bottom: calc(var(--base-spacing) / 2);
+  padding-top: calc(var(--base-spacing) / 2);
+  > label {
+    margin-bottom: .5em;
+  }
+}
+
+.c-input {
+  &--large {
+    height: calc(var(--base-spacing) * 4);
+  }
+}
+
+
+.c-Input {
+  margin-bottom: 16px;
+
+  &__label {
+    font-weight: var(--font-bold);
+    color: var(--color-secondary);
+    font-size: 10px;
+    margin-bottom: 8px;
+  }
+  &__field {
+    height: calc(var(--base-spacing) * 4);
+    // TODO Tomaz: Add dark theme color
+    background-color: #FBFBFB;
+  }
+
+  &__textarea {
+    background-color: #FBFBFB;
+  }
+
+  &__select {
+
+  }
+
+  &__labelCheckbox {
+    margin-bottom: 8px;
+
+    input[type="checkbox"] {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+}

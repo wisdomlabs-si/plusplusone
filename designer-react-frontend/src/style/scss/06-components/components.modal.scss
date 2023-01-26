@@ -1,0 +1,15 @@
+.c-Modal {
+
+  &--small {
+    width: 250px;
+    box-shadow: 0 2px 14px rgb(0 0 0 / 15%), 0 0 0 0.5px rgb(0 0 0 / 20%);
+    background-color: var(--color-surface-4);
+    position: fixed;
+    z-index: 100;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,19 @@
+/* ==========================================================================
+   #CONTAINER-OBJECT
+   ========================================================================== */
+
+.o-container {
+  @include spacing-sides;
+  padding: 32px;
+  width: 100%;
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+// .o-grid {
+//   display: grid;
+//   grid-template-columns: repeat(3, 1fr);
+//   grid-gap: $spacing-unit * 3;
+//   margin: $spacing-sides * 2 $spacing-sides 0;
+// }

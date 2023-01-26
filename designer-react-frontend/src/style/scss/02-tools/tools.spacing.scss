@@ -1,0 +1,21 @@
+@mixin spacing-sides($right: true, $left: true) {
+  @if $right {
+    padding-right: $spacing-sides;
+  }
+
+  @if $left {
+    padding-left: $spacing-sides;
+  }
+}
+
+@mixin margin-sides($right: true, $left: true, $negative: false) {
+  $minus: if($negative, '-', '');
+
+  @if $right {
+    margin-right: #{$minus}$spacing-sides;
+  }
+
+  @if $left {
+    margin-left: #{$minus}$spacing-sides;
+  }
+}

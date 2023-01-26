@@ -1,0 +1,40 @@
+{
+    "extends": [
+      "standard",
+      "prettier",
+      "prettier/standard",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": [
+      "@typescript-eslint/eslint-plugin",
+      "prettier"
+    ],
+    "rules": {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "prettier/prettier": "error",
+      "react/prop-types": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "no-use-before-define": "off",
+      "@typescript-eslint/no-use-before-define": "error",
+      "@typescript-eslint/camelcase": "off",
+      "camelcase": "off",
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ],
+      "no-debugger": "error"
+    },
+    "parser": "@typescript-eslint/parser",
+    "env": {
+      "browser": true,
+      "jest": true
+    },
+    "settings": {}
+  }
+  

@@ -1,0 +1,76 @@
+.c-InlinePreview {
+  font-size: 11px;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+  background-color: var(--color-surface-2);
+
+  &__header {
+    border-top-left-radius: var(--base-radius);
+    border-top-right-radius: var(--base-radius);
+    padding: 8px;
+    color: #ffffff;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  &__name {
+    font-weight: var(--font-bold);
+  }
+
+  &__list {
+    padding: 8px;
+
+     > li {
+       display: flex;
+       justify-content: space-between;
+     }
+   }
+
+  &__prop {
+    color: var(--color-text);
+  }
+
+  &__type {
+    color: var(--color-highlight);
+  }
+}
+
+.c-InlineEdit {
+  font-size: 11px;
+  font-family: helvetica neue, helvetica, arial, sans-serif;
+
+  input[type="text"] {
+    height: 20px;
+    border-radius: 2px;
+    width: 126px;
+    margin-right: 10px;
+    font-size: 11px;
+  }
+
+  &__content {
+    background-color: var(--color-surface-1);
+    border-radius: 2px;
+  }
+
+  &__heading {
+    margin-bottom: 10px;
+    padding: 8px 8px 0 8px;
+
+  }
+
+  &__props {
+    padding: 0 8px;
+    background-color: var(--color-surface-2);
+    border: solid 1px var(--color-border);
+    border-radius: var(--base-radius);
+
+    &-row {
+      margin-top: 10px;
+      &:last-of-type {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+}

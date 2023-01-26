@@ -1,0 +1,27 @@
+.c-ImageUpload {
+  &__image {
+    padding: 0 32px;
+    margin-bottom: 32px;
+  }
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    height: 32px;
+    line-height: initial;
+    font-size: var(--font-normal);
+    font-weight: var(--font-bold);
+    border-radius: var(--base-radius);
+    margin: 0;
+    padding-left: calc(var(--base-spacing) * 3);
+    padding-right: calc(var(--base-spacing) * 3);
+    background-color: var(--color-highlight);
+    color: var(--color-btn-light);
+
+    &:disabled {
+      opacity: .5;
+    }
+
+  }
+}

@@ -1,0 +1,20 @@
+.c-Draggable {
+  &--active {
+    border: solid 1px var(--color-highlight);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border-radius: var(--base-radius);
+    overflow: hidden;
+  }
+}
+
+.c-DraggableColumn {
+  border-bottom: solid 1px var(--color-border);
+  background-color: #fff;
+
+  &--active {
+    border: solid 1px var(--color-highlight);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    background-color: #fff;
+    border-radius: var(--base-radius);
+  }
+}

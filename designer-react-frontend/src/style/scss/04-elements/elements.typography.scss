@@ -1,0 +1,18 @@
+h1,
+h2,
+h3 {
+  font-weight: var(--font-bold);
+  font-size: var(--font-small);
+  color: var(--color-title);
+  text-transform: uppercase;
+}
+
+p, ul, ol, dl, button, a {
+  font-size: var(--font-normal);
+  line-height: 1.5;
+}
+
+ul, ol, dl {
+  margin: 0;
+  padding: 0;
+}

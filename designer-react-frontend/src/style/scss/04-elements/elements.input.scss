@@ -1,0 +1,36 @@
+input[type="text"],
+input[type="search"],
+input[type="password"],
+input[type="filter"],
+select,
+textarea {
+  border: solid 1px var(--color-border);
+  background-color: var(--color-surface-1);
+  border-radius: var(--base-radius);
+  color: var(--color-text);
+  padding:  var(--base-spacing);
+
+  &::-webkit-input-placeholder {
+    color: var(--color-placeholder);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 1px var(--color-highlight);
+  }
+}
+
+textarea {
+  line-height: 1.5;
+  height: auto;
+  resize: none;
+  overflow: auto;
+}
+
+select {
+  width: 100%;
+}
+
+input[type="text"].select__input {
+    box-shadow: none;
+}

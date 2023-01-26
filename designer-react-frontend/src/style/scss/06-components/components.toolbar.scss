@@ -1,0 +1,42 @@
+.c-Toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex: 1 1 0;
+
+  padding-left: $spacing-sides;
+  padding-right: $spacing-sides;
+  background-color: var(--color-surface-2);
+
+  &__group {
+    padding-right: $spacing-sides;
+    display: flex;
+    position: relative;
+
+    > * {
+      margin-right: var(--base-spacing);
+      margin-left: var(--base-spacing);
+    }
+  }
+}
+
+.c-Toolbar__item {
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+
+  > select,
+  > input {
+    width: 150px;
+  }
+
+  > span.label {
+    font-size: var(--font-small);
+    padding-top: 7px;
+  }
+
+  &--right {
+    margin-left: auto;
+    padding-right: 0;
+  }
+}

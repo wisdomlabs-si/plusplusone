@@ -1,0 +1,27 @@
+.c-ColorPicker {
+
+  &__container {
+    position: relative;
+  }
+
+  &__swatch {
+    width: 32px;
+    height: 32px;
+    border-top-left-radius: var(--base-radius);
+    border-bottom-left-radius: var(--base-radius);
+  }
+
+  &__input {
+    padding-right: 16px;
+    input {
+      border-radius: var(--base-radius);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      border: solid 1px var(--color-border);
+      background-color: var(--color-surface-1);
+      color: var(--color-text);
+      padding:  var(--base-spacing);
+      width: 120px;
+    }
+  }
+}

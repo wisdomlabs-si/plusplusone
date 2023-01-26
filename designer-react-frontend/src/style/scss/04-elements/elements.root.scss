@@ -1,0 +1,77 @@
+:root {
+  --color-primary: #212121;
+  --color-secondary: #5E6366;
+  --color-tertiary: #78909C;
+  --color-highlight: #367BF5;
+  --color-highlight-50: #97BAF7;
+  --color-highlight-25: #E5EFFF;
+  --color-positive: #2FA84F;
+  --color-negative: #FF0A45;
+  --color-warning: #F3AA18;
+  --color-border: #E8ECEE;
+
+  --color-surface-1: #ffffff;
+  --color-surface-2: #F7F9FA;
+  --color-surface-3: #F7F9FA;
+  --color-text: var(--color-primary);
+  --color-title: var(--color-primary);
+  --color-placeholder: #C2C3C4;
+  --color-btn-light: #ffffff;
+  --color-input-light: #ffffff;
+
+  --base-radius: 3px;
+  --base-spacing: 8px;
+
+  --font-small: 10px;
+  --font-normal: 12px;
+  --font-bold: 700;
+}
+
+:root {
+  @media (prefers-color-scheme: dark) {
+    --color-primary: #ffffff;
+    --color-secondary: #BABCC1;
+    --color-tertiary: #28314C;
+    --color-highlight: #689DF8;
+    --color-highlight-50: #1A2642; // not true color
+    --color-highlight-25: #1A2642; // not true color
+    --color-positive: #1E6B32;
+    --color-negative: #8F0627;
+    --color-warning: #A87611;
+
+    --color-surface-1: #151926;
+    --color-surface-2: #191F32;
+    --color-surface-3: #212a46;
+    --color-surface-4: #313D63;
+    --color-border: #28314C;
+    --color-text: var(--color-primary);
+    --color-title: var(--color-primary);
+    --color-placeholder: #666971;
+    --color-btn-light: #ffffff;
+    --color-input-light: #ffffff;
+
+    .light-theme {
+      --color-primary: #212121;
+      --color-secondary: #5E6366;
+      --color-tertiary: #78909C;
+      --color-highlight: #367BF5;
+      --color-highlight-50: #97BAF7;
+      --color-highlight-25: #E5EFFF;
+      --color-positive: #2FA84F;
+      --color-negative: #FF0A45;
+      --color-warning: #F3AA18;
+      --color-border: #E8ECEE;
+
+      --color-surface-1: #ffffff;
+      --color-surface-2: #F7F9FA;
+      --color-surface-3: #e8f0f2;
+      --color-surface-4: #F7F9FA;
+      --color-text: var(--color-primary);
+      --color-title: var(--color-primary);
+      --color-placeholder: #C2C3C4;
+      --color-btn-light: #ffffff;
+      --color-input-light: #ffffff;
+    }
+  }
+}
+

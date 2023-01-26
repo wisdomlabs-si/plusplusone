@@ -1,0 +1,110 @@
+.c-NodeSize  {
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+
+  > input[type="radio"] {
+    position: absolute;
+    left: -1000px;
+
+    + label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background-color: var(--color-secondary);
+      color: #ffffff;
+      font-size: 10px;
+    }
+
+    &:checked {
+      + label {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--color-highlight);
+      }
+    }
+  }
+
+  &--small {
+    > input[type="radio"] {
+
+      + label {
+        width: 35px;
+        height: 35px;
+      }
+    }
+  }
+  &--medium {
+    > input[type="radio"] {
+
+      + label {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+  &--large {
+    > input[type="radio"] {
+
+      + label {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+}
+
+$node-color-list:(
+  red500: '#EF4444',
+  orange500: '#F97316',
+  amber500: '#F59E0B',
+  yellow500: '#EAB308',
+  lime500: '#84CC16',
+  green500: '#22C55E',
+  emerald500: '#10B981',
+  teal500: '#14B8A6',
+  cyan500: '#06B6D4',
+  lightBlue500: '#0EA5E9',
+  blue500: '#3B82F6',
+  indigo500: '#6366F1',
+  violet500: '#8B5CF6',
+  purple500: '#A855F7',
+  fuchsia500: '#D946EF',
+  pink500: '#EC4899',
+  rose500: '#F43F5E'
+);
+
+.c-NodeColor {
+  position: relative;
+  overflow: hidden;
+  padding: 3px;
+
+  > input[type="radio"] {
+    position: absolute;
+    left: -1000px;
+
+    + label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+    }
+
+    &:checked {
+      + label {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px var(--color-highlight);
+      }
+    }
+  }
+
+  @each $key,$val in $node-color-list {
+    &--#{$key} {
+      > input[type="radio"] {
+        + label {
+          background-color: #{$val};
+        }
+      }
+    }
+  }
+}

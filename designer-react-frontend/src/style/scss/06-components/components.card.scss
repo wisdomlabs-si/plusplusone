@@ -1,0 +1,101 @@
+.c-Card {
+  background-color: var(--color-surface-1);
+  border-bottom: solid 1px var(--color-border);
+
+  &--collapsed {
+    border-bottom: solid 1px var(--color-border);
+    margin: 0;
+  }
+
+  &__header {
+    padding: 0 calc(var(--base-spacing) * 2);
+    height: 46px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    &-order {
+      flex: 0 0 24px;
+      display: none;
+    }
+
+    &-icon {
+      margin-right: 8px;
+      color: var(--color-secondary);
+    }
+
+    &-name {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &[data-expanded="false"] {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        flex: 0 0 160px;
+        margin-right: 32px;
+      }
+    }
+
+    &-summary {
+      flex: 3 0 0;
+      min-width: 0;
+      padding-right: 16px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: var(--color-secondary);
+    }
+
+    &-actions {
+      display: flex;
+      align-items: flex-end;
+      margin-left: auto;
+    }
+
+
+  }
+
+  &__summary {
+    color: var(--color-secondary);
+    font-weight: normal;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    [data-expanded="false"] & {
+      margin-right: auto;
+    }
+  }
+
+  &__content {
+    padding: 0 calc(var(--base-spacing) * 2) calc(var(--base-spacing) * 2) calc(var(--base-spacing) * 2);
+  }
+
+  // Card elevation styles
+  &--1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    //transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  }
+
+  &--2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }
+
+  &--3 {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  }
+
+  &--4 {
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+  &--5 {
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  }
+
+
+}

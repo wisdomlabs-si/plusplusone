@@ -1,0 +1,26 @@
+.c-Modal {
+
+  &__backdrop {
+    background-color: rgba(0,0,0,.90);
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__container {
+    border-radius: var(--base-radius);
+    width: 600px;
+    max-width: calc(100% - 24px);
+    max-height: calc(100% - 24px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: calc(var(--base-spacing) * 3);
+    background-color: var(--color-surface-4);
+  }
+}
