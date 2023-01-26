@@ -1,0 +1,336 @@
+<mxfile host="65bd71144e">
+    <diagram id="lkyXxgaArdVWalxgudrh" name="Page-1">
+        <mxGraphModel dx="804" dy="1150" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 11px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;REL_SOURCE&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="16" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="&lt;meta charset=&quot;utf-8&quot;&gt;&lt;span style=&quot;color: rgb(240, 240, 240); font-family: helvetica; font-size: 11px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(42, 42, 42); display: inline; float: none;&quot;&gt;REL_SOURCE&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="14" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;span style=&quot;color: rgb(240 , 240 , 240) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 11px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(42 , 42 , 42) ; display: inline ; float: none&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="16" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="60" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="13" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;DbTrigger&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;af8d506c-eb55-4d1f-8753-b4ec9f4c86db&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="14" target="50" edge="1">
+                    <mxGeometry x="-0.6111" relative="1" as="geometry">
+                        <mxPoint x="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;SCHEDULES&quot;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="40" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;CONDITIONED_WITH&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="44" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="21" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="13" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="14" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="31" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="REL_SOURCE" style="edgeStyle=none;html=1;" parent="1" source="31" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="866.0932767758427" y="1061.5889360201309" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="54" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="31" target="48" edge="1">
+                    <mxGeometry x="-0.1675" y="-5" relative="1" as="geometry">
+                        <mxPoint x="-1" as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="31" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;PROVIDES_VALUE&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="40" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;CreatedRel&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="1040" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="40" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1020.0022657430013" y="1398.242921898348" as="sourcePoint"/>
+                        <mxPoint x="398.26446080683104" y="1100.0048400722872" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="52" value="DEPENDS_ON" style="edgeStyle=none;html=1;" parent="1" source="43" target="46" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="DEPENDS_ON" style="edgeStyle=none;html=1;" parent="1" source="43" target="99" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="61" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="122" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="123" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="126" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="128" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="78" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="129" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="79" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="130" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="76" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="77" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="110" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="133" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="105" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="103" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="106" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b style=&quot;font-size: 13px&quot;&gt;Metagraph&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- name: &quot;Triggering&quot;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;529142e5-9aaa-4580-b787-539f6ea45629&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#56517e;fillColor=#d0cee2;" parent="1" vertex="1">
+                    <mxGeometry x="2920" y="40" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="44" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;CreatedNode&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1040" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b style=&quot;font-size: 13px&quot;&gt;@@Metagraph&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- name: &quot;Computation&quot;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;2377b64e-6d8b-4837-bee6-dd59f1330251&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#56517e;fillColor=#d0cee2;" parent="1" vertex="1">
+                    <mxGeometry x="2680" y="240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="46" target="48" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;@@NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;Input&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;0b9ffc83-849a-44ee-b1a1-9128b0fa8f43&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="2440" y="640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="49" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="46" target="50" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3253.8749680643105" y="-1391.6270742719894" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="50" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;@@NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;Job&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;97cec68b-e465-45bc-ad60-5a284c062bf3&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="2440" y="240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="HAS_TYPE" style="edgeStyle=none;html=1;" parent="1" source="55" target="142" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2170" y="1360" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="55" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;AbstractNodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;Trigger&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;font style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;f3147f70-ee7b-4ab8-97d0-2ee22bf75d54&quot;&lt;/font&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="HAS_TYPE" style="edgeStyle=none;html=1;" parent="1" source="55" target="58" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="700" y="270" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="57" value="HAS_PROPERTY" style="edgeStyle=none;html=1;" parent="1" source="58" target="59" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="58" value="&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;b&gt;Type&lt;/b&gt;&lt;br&gt;- name: &quot;&lt;/font&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;Trigger&lt;/span&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&quot;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="59" value="&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;b&gt;Property&lt;/b&gt;&lt;br&gt;- name: &quot;active&quot;&lt;br&gt;- type: &quot;Boolean&quot;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#d79b00;fillColor=#FF9999;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="62" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="61" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="61" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;TimeTrigger&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;1cfd1aaf-eb31-4adb-9abb-1c9ba168a6f5&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="63" value="HAS_TYPE" style="edgeStyle=none;html=1;" parent="1" source="61" target="65" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1410" y="960" as="sourcePoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="64" value="HAS_PROPERTY" style="edgeStyle=none;html=1;" parent="1" source="65" target="66" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;b&gt;Type&lt;/b&gt;&lt;br&gt;- name: &quot;&lt;/font&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;CronSpec&lt;/span&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&quot;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;b&gt;Property&lt;/b&gt;&lt;br&gt;- name: &quot;cron&quot;&lt;br&gt;- type: &quot;String&quot;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#d79b00;fillColor=#FF9999;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;AbstractNodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;DbTriggerCondition&quot;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="68" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="68" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;AbstractNodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;NodeCondition&quot;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="1040" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="69" target="67" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;AbstractNodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;RelCondition&quot;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="1040" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="76" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;ModifiedRel&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="1240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="77" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;ModifiedNode&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="78" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;DeletedRel&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="1440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="SUBCLASS_OF" style="edgeStyle=none;html=1;" parent="1" source="79" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;DeletedNode&lt;/span&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="1440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="99" target="97" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="99" target="100" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1657.4817028532916" y="1853.1478714333862" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="96" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="99" target="98" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;@@NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;RelDef&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;e255a339-9763-48b0-9ba8-e4de15160da3&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="2680" y="1840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;@@NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;Type&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;1a1565c8-9f6f-4391-a7b4-0aa98c778e51&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="2680" y="1640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="&lt;b style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;@@Metagraph&lt;/b&gt;&lt;br style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;Meta&quot;&lt;/span&gt;&lt;br style=&quot;color: rgb(0 , 0 , 0)&quot;&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- uuid: &quot;d9262ce3-7847-4263-aa18-a27bcdc1f642&quot;&lt;/span&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#56517e;fillColor=#d0cee2;" parent="1" vertex="1">
+                    <mxGeometry x="2920" y="1640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;@@AbstractNodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;NodeDefinition&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;fd4d388c-b1b6-4f7a-b543-16f3011de8d3&lt;/span&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="2680" y="2040" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="HAS_TYPE" style="edgeStyle=none;html=1;" parent="1" source="103" target="106" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="112" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_SOURCE&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="103" target="68" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="103" target="100" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;DEFINED_BY&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="1840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="HAS_TYPE" style="edgeStyle=none;html=1;" parent="1" source="105" target="106" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="3750" y="-270" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="113" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_SOURCE&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="105" target="69" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="115" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="105" target="97" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;DEFINED_BY&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="1840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b style=&quot;font-size: 13px&quot;&gt;Type&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- name: &quot;DEFINED_BY&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="1840" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="110" target="98" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_SOURCE&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="110" target="67" edge="1">
+                    <mxGeometry x="-0.5492" y="2" relative="1" as="geometry">
+                        <mxPoint as="offset"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="110" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;HAS_TYPE&quot;&lt;/span&gt;&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="1640" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;@@NodeDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;Function&quot;&lt;br&gt;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;b9c2b5e7-94b3-40ff-9e12-ca34df1147f1&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="2440" y="440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="137" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="46" target="136" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2690.0000000000205" y="310" as="sourcePoint"/>
+                        <mxPoint x="2570" y="310" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="139" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_SOURCE&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="138" target="55" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="&lt;span style=&quot;font-family: &amp;#34;helvetica&amp;#34;&quot;&gt;REL_TARGET&lt;/span&gt;" style="edgeStyle=none;html=1;" parent="1" source="138" target="136" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="&lt;b&gt;&lt;font style=&quot;font-size: 13px&quot; color=&quot;#000000&quot;&gt;RelDef&lt;br&gt;&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-size: 13px&quot;&gt;- name: &quot;EXECUTES&quot;&lt;/span&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;strokeColor=#9673a6;fillColor=#CCFF99;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="240" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="43" target="138" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="1970.0000000000205" y="110" as="sourcePoint"/>
+                        <mxPoint x="890" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="142" value="&lt;font color=&quot;#000000&quot;&gt;&lt;b style=&quot;font-size: 13px&quot;&gt;@@Type&lt;/b&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- name: &quot;Named&quot;&lt;/span&gt;&lt;br&gt;&lt;span style=&quot;font-size: 13px&quot;&gt;- uuid: &quot;73c199cd-87ee-478d-86bb-61e85e67e371&quot;&lt;/span&gt;&lt;br&gt;&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;direction=west;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+                    <mxGeometry x="2680" y="1440" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="DEFINES" style="edgeStyle=none;html=1;dashed=1;" parent="1" source="99" target="142" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="2930" y="1710" as="sourcePoint"/>
+                        <mxPoint x="2810" y="1710" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

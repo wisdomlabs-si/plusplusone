@@ -1,0 +1,27 @@
+<mxfile host="65bd71144e">
+    <diagram id="jHi80MvgkjdAEWzww9eW" name="Page-1">
+        <mxGraphModel dx="1597" dy="789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4" value="EXECUTES" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="TimeTrigger&lt;br&gt;- name: &quot;PeriodicExecutorStart&quot;&lt;br&gt;- cron: &quot;0/5 * * ? * * *&quot;&lt;br&gt;- active: true" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#e3c800;fontColor=#000000;strokeColor=#B09500;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="40" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="IMPLEMENTED" style="edgeStyle=none;html=1;" edge="1" parent="1" source="3" target="6">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="110" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="3" value="Function&lt;br&gt;- name: &quot;startExecutor&quot;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fa6800;fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="1">
+                    <mxGeometry x="280" y="40" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="NativeCall&lt;br&gt;- cypher: &quot;MATCH (executor:JobExecutor) WHERE executor.running = false CALL custom.kernel.executor.startExecutor() YIELD errorMessage RETURN *&quot;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6d8764;fontColor=#ffffff;strokeColor=#3A5431;" vertex="1" parent="1">
+                    <mxGeometry x="520" width="200" height="200" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
