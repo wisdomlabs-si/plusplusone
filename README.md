@@ -1,16 +1,35 @@
 # ++.1
 
-## Pre-requisites 
+++.1 repository is home of the prototype for our graph designing application. The goal of the application is to be a
+general and comprehensive tool for exploring and transforming datasets, building applications, dashboards, and even
+developing ML models all by simply creating and editing graph models.
+
+The idea behind Graph Designer is to use graph models to describe everything from meta models, code, dashboards to
+applications, making them understandable for both humans and machines.
+
+To start using Graph Designer, simply follow the instructions below:
+
+- Pre-requisites
+- Build
+- Setup & demos
+
+By following these steps, you'll be able to build the necessary jars, docker images, and run the application on your
+local machine. You'll also be able to import data sets and schemas to explore different demos.
+
+## Pre-requisites
 
 ## Build
+
 ### Designer Neo4j backend:
 
 - build jar
+
 ```
 mvn -f designer-neo4j-backend/pom.xml clean package
 ```
 
-- build the docker image
+- build docker image
+
 ```
 docker build -t designer-neo4j -f designer-neo4j-backend/docker/neo4j/Dockerfile ./designer-neo4j-backend
 ```
@@ -18,11 +37,13 @@ docker build -t designer-neo4j -f designer-neo4j-backend/docker/neo4j/Dockerfile
 ### Designer Quarkus proxy
 
 - build jar
+
 ```
 mvn -f designer-quarkus-proxy/pom.xml clean package
 ```
 
 - build docker image
+
 ```
 mvn -f designer-quarkus-proxy/pom.xml clean package -Dquarkus.container-image.build=true -Dquarkus.container-image.name=designer-proxy -Dquarkus.container-image.tag=latest -Dquarkus.container-image.group=
 ```
@@ -30,12 +51,14 @@ mvn -f designer-quarkus-proxy/pom.xml clean package -Dquarkus.container-image.bu
 ### Designer React frontend
 
 - build the designer frontend:
+
 ```
 npm i --prefix ./designer-react-frontend
 npm run --prefix ./designer-react-frontend build
 ```
 
-- build the designer frontend docker image:
+- build docker image:
+
 ```
 docker build -t designer-frontend -f designer-react-frontend/Dockerfile ./designer-react-frontend
 ```
@@ -45,51 +68,52 @@ docker build -t designer-frontend -f designer-react-frontend/Dockerfile ./design
 ### Setup
 
 When you have built all the required images, move to `docker` directory and first reset the volume by running.
+
 ```
 ./resetVolume.sh
 ```
 
-Run docker-compose
+You can then run docker-compose with:
+
 ```
 docker-compose up -d
 ```
 
-Docker logs
-```
-docker-compose logs -f
-```
+(if you wish to attach to the docker logs run: `docker-compose logs -f`).
 
-Access Neo4j on http://localhost:7474
+After the containers have successfully, we must now import the metadata into the Neo4j database to make the designer
+functional. Access Neo4j browser on http://localhost:7474
 Username: `neo4j`
 Password: `pass`
 
 Import data into Neo4j by running
 
 ```cypher
-CALL apoc.cypher.runFile("file:///main/bios/initBios.cypher")
+CALL apoc.cypher.runFile('file:///main/bios/initBios.cypher')
 ```
-After the scripts have loaded access graph designer application on  `http://localhost:3000`.
+
+After the scripts have loaded access graph designer application on  `http://localhost:3000`. You now have a graph
+designer with the basic functionalities to build other projects, if you wish to import some demo projects read the
+following section.
 
 ### Demos
 
-Specific demonstrations for the Designer must be located in the `demos` directory because the directory is then mounted inside the Neo4j docker container.
-The structure of demos must follow a certain convention to make deployment easier.
+Specific demonstrations for the Graph designer are located in the `demos` directory because the directory is then
+mounted inside the Neo4j docker container. The structure of demos must follow a certain convention to make deployment
+easier.
 
-Each demo must be contained in a separate directory under `demos` (for example demo movies is located under `demos/movies`).
+Each demo contains a separate directory under `demos` (for example demo movies is located under `demos/movies`).
 
 Cypher files that contain meta structures (metagraph, functions, views ...) can be prepended with
 `metagraph_`, `graphlet_`, `function_`, `job_`, `functionality_`, `style_`, `view_` or `project_` to make use of the
 `custom.designer.import.importFromDirectory` procedure that executes cypher files in the correct order.
 
-Instructions on how to import data sets and schemas must be provided for each demo.
+Instructions on how to import data sets and schemas should be provided for each demo.
 
-For example on how to load the Movies demo into designer one would run the following in the Neo4j browser:
+For example on how to load the Northwind demo into designer one would run the following in the Neo4j browser:
 
-- Import meta structures:
-```cypher
-CALL custom.designer.import.importFromDirectory("demos/movies");
-```
-- Import data set:
-```cypher
-CALL apoc.cypher.runFile("demos/movies/movies_dataset.cypher");
+``` cypher
+CALL custom.designer.import.importFromDirectory("demos/northwind");
+CALL apoc.cypher.runSchemaFile("demos/northwind/northwind_schema.cypher");
+CALL apoc.cypher.runFile("demos/northwind/northwind_dataset.cypher");
 ```
