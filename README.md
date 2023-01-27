@@ -1,6 +1,6 @@
 # ++.1
 
-++.1 repository is home of the prototype for our graph designing application. The goal of the application is to be a
+++.1 repository is home to the prototype of our graph designing application. The goal of the application is to be a
 general and comprehensive tool for exploring and transforming datasets, building applications, dashboards, and even
 developing ML models all by simply creating and editing graph models.
 
@@ -92,8 +92,8 @@ Import data into Neo4j by running
 CALL apoc.cypher.runFile('file:///main/bios/initBios.cypher')
 ```
 
-After the scripts have loaded access graph designer application on  `http://localhost:3000`. You now have a graph
-designer with the basic functionalities to build other projects, if you wish to import some demo projects read the
+After the scripts have loaded, you can access the graph designer application on  `http://localhost:3000`. 
+You now have a graph designer with the basic functionalities to build other projects, if you wish to import some demo projects read the
 following section.
 
 ### Demos
@@ -109,8 +109,7 @@ Cypher files that contain meta structures (metagraph, functions, views ...) can 
 `custom.designer.import.importFromDirectory` procedure that executes cypher files in the correct order.
 
 Instructions on how to import data sets and schemas should be provided for each demo.
-
-For example on how to load the Northwind demo into designer one would run the following in the Neo4j browser:
+For example on how to load the Northwind demo into designer, one would run the following cypher in Neo4j browser:
 
 ```cypher
 CALL custom.designer.import.importFromDirectory("demos/northwind");
