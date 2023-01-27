@@ -63,7 +63,7 @@ MATCH (nodeDef:NodeDef {uuid: nodeDefUuid})
 MATCH (view)-[:HAS_STYLE]->(style:Style {name: styleName})
 
 MERGE (style)-[hasNodeStyle:NODE_STYLE]->(nodeStyle:NodeStyle)-[forNode:FOR_NODE]->(nodeDef)
-  ON CREATE SET hasNodeStyle.uuid = randomUUID(), nodeStyle.uuid = randomUUID(), forNode.uuid = randomUUID()
+  ON CREATE SET hasNodeStyle.uuid = randomUUID(), nodeStyle.uuid = randomUUID(), forNode.uuid = randomUUID(), nodeStyle:_Identifiable
 SET nodeStyle += {color: color, size: size, icon: icon}
 
 WITH view, nodeDef
@@ -74,5 +74,3 @@ RETURN {node: viewedNode} AS result,
        0 AS statusCode,
        '' AS message,
        'APPEND' AS strategy;
-
-

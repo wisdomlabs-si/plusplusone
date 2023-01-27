@@ -1,0 +1,35 @@
+version: "3.1"
+
+services:
+  designer-basic-frontend:
+    container_name: designer-frontend
+    image: designer-frontend
+    ports:
+      - "${GRAPH_DESIGNER_FRONTEND_PORT}:3000"
+    environment:
+      - API_GRAPH_DESIGNER_SERVICE
+
+  designer-proxy:
+    image: designer-proxy
+    container_name: designer-proxy
+    ports:
+      - "${GRAPH_DESIGNER_BACKEND_PORT}:8080"
+    environment:
+      - NEO4J_URI
+      - NEO4J_USER
+      - NEO4J_PASS
+
+  designer-neo4j:
+    container_name: designer-neo4j
+    image: designer-neo4j
+    ports:
+      - "${NEO4J_HTTP_PORT}:7474"
+      - "${NEO4J_BOLT_PORT}:7687"
+    volumes:
+      - ./neo4j/data:/data
+      - ./neo4j/import:/import
+      - ../demos:/import/demos
+    environment:
+      - NEO4J_AUTH
+      - NEO4J_dbms_connector_http_advertised__address
+      - NEO4J_dbms_connector_bolt_advertised__address

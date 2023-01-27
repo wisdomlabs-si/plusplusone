@@ -16,6 +16,7 @@ WITH $view AS view,
      custom.util.graphObjectType($rel) AS relType
 
 MATCH (relDef:RelDef {name: relType})
+WITH view, relDef LIMIT 1
 MATCH (view)-[:HAS_STYLE]->(style:Style)
 
 WITH view, relDef, collect(DISTINCT style.name) AS styles
@@ -64,7 +65,7 @@ MATCH (relDef:RelDef {uuid: relDefUuid})
 MATCH (view)-[:HAS_STYLE]->(style:Style {name: styleName})
 
 MERGE (style)-[hasRelStyle:REL_STYLE]->(relStyle:RelStyle)-[forRel:FOR_REL]->(relDef)
-  ON CREATE SET hasRelStyle.uuid = randomUUID(), relStyle.uuid = randomUUID(), forRel.uuid = randomUUID()
+  ON CREATE SET hasRelStyle.uuid = randomUUID(), relStyle.uuid = randomUUID(), forRel.uuid = randomUUID(), relStyle:_Identifiable
 SET relStyle += {color: color, lineStyle: lineStyle, lineWidth: lineWidth, icon: icon}
 
 WITH view, relDef

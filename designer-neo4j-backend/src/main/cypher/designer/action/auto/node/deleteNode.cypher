@@ -14,7 +14,7 @@
 */
 
 RETURN 'Delete Node' AS name,
-       'Delete' AS group,
+       'View' AS group,
        'trash' AS icon,
        [] AS params,
        [] AS implicitParams,
