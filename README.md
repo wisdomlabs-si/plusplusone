@@ -112,7 +112,7 @@ Instructions on how to import data sets and schemas should be provided for each 
 
 For example on how to load the Northwind demo into designer one would run the following in the Neo4j browser:
 
-``` cypher
+```cypher
 CALL custom.designer.import.importFromDirectory("demos/northwind");
 CALL apoc.cypher.runSchemaFile("demos/northwind/northwind_schema.cypher");
 CALL apoc.cypher.runFile("demos/northwind/northwind_dataset.cypher");
