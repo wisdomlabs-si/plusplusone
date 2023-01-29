@@ -21,31 +21,6 @@
         <surefire-plugin.version>3.0.0-M5</surefire-plugin.version>
     </properties>
 
-    <scm>
-        <developerConnection>scm:git:https://gitlab.com/graph-platform/apps/kenstack-graph-designer-backend.git</developerConnection>
-        <tag>HEAD</tag>
-    </scm>
-
-    <distributionManagement>
-        <snapshotRepository>
-            <id>maven-graph</id>
-            <name>Snapshots</name>
-            <url>${nexus.url}/repository/maven-snapshots</url>
-        </snapshotRepository>
-        <repository>
-            <id>maven-graph</id>
-            <name>Releases</name>
-            <url>${nexus.url}/repository/maven-releases</url>
-        </repository>
-    </distributionManagement>
-
-    <repositories>
-        <repository>
-            <id>maven-graph</id>
-            <url>${nexus.url}/repository/maven-graph/</url>
-        </repository>
-    </repositories>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
