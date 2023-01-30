@@ -20,6 +20,20 @@ local machine. You'll also be able to import data sets and schemas to explore di
 
 ## Build
 
+### Make File
+You can start your project with the makefile that we created for you. 
+
+To use it run
+```
+make build-all   
+```
+
+This will build all the docker images for you and start docker containers. 
+
+> **_NOTE:_**  If You use this approach, pleas skipp all steps till Import data into Neo4J! 
+
+Alternatively you could build one image after another with below steps:
+
 ### Designer Neo4j backend:
 
 - build jar
