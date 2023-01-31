@@ -131,4 +131,4 @@ CALL apoc.cypher.runSchemaFile("demos/northwind/northwind_schema.cypher");
 CALL apoc.cypher.runFile("demos/northwind/northwind_dataset.cypher");
 ```
 
-for more go to Go to [about page](about.md)
+for more go to Go to [about page](docs/page_one.md)
