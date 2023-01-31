@@ -5,7 +5,3 @@ filename: about.md
 --- 
 
 
-
-* TOC
-{:toc}
-
