@@ -7,3 +7,10 @@ kramdown:
   syntax_highlighter: rouge
 plugins:
   - jekyll-default-layout
+
+# Navigation
+# List links that should appear in the site sidebar here
+navigation:
+  - text: Documentation
+    internal: true
+    url: ./docs
