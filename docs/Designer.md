@@ -1,3 +1,9 @@
+---
+layout: default
+title: Designer App
+nav_order: 1
+---
+
 # Designer
 
 ## Idea

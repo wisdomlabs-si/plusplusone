@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Search
+title: View Model
+nav_order: 2
 ---
 
 # Views

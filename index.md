@@ -1,197 +1,139 @@
 ---
-title: Home
+title: Installation
 layout: home
 ---
 
-# Designer
+# ++.1
 
-## Idea
+++.1 repository is home to the prototype of our graph designing application. The goal of the application is to be a
+general and comprehensive tool for exploring and transforming datasets, building applications, dashboards, and even
+developing ML models all by simply creating and editing graph models.
 
-The idea behind this designer is to simplify editing of a graph.
+The idea behind Graph Designer is to use graph models to describe everything from meta models, code, dashboards to
+applications, making them understandable for both humans and machines.
 
-We believe that having the schema of the graph or model that can be interpreted by designer will help as create more intuitive and guided UI.
+To start using Graph Designer, simply follow the instructions below:
 
-The main idea is, that designer "understand" the graph - and it can create all functionality base on this knowledge.\
-Because of understanding underlying model of a data, designer could restrict us to be able to add only valid data nad valid actions.
+- Pre-requisites
+- Build
+- Setup & demos
 
-The main functionality like CRUD operations and traversals are generated automatically because of that.
+By following these steps, you'll be able to build the necessary jars, docker images, and run the application on your
+local machine. You'll also be able to import data sets and schemas to explore different demos.
 
-All other additional functionality we can add for specific view or for specific type of node or relationship. This functionality will only appear in designer for relevant elements, for all other will remain hidden.
+## Pre-requisites
 
-> To use our designer we recommend the following steps:
-> - Create view for editing your model of the data (see [views page](Views.md))
-> - Create model of your data [model page](Models.md)
-> - Create your view for editing data (see [views page](Views.md))
-> - Play with your data
+## Build
 
-But first let see designer structure and functionality
+### Make File
+You can start your project with the makefile that we created for you.
 
-## Designer connection
+To use it run
+```
+make build-all   
+```
 
-Designer is connected to a NEO4J database that is deployed with this project in docker container named `designer-neo4j` \
-Database is available at `http://localhost:7474/` \
-But for showing the data inside this designer, data need to equipped with models (see more at [model page](Models.md))
+This will build all the docker images for you and start docker containers.
 
-## Structure of designer
+> **_NOTE:_**  If You use this approach, pleas skipp all steps till Import data into Neo4J!
 
-Our designer is structure with four main elements.
+Alternatively you could build one image after another with below steps:
 
-1. View selector
-2. Main graph viewer
-3. Global actions
-4. Contextual actions
+### Designer Neo4j backend:
 
-![Designer structure](./docs/images/designer_structure.png "Designer structure")
+- build jar
 
-### View selector
+```
+mvn -f designer-neo4j-backend/pom.xml clean package
+```
 
-Inside our designer, you can define and create multiple `views`. Inside view, you could define how you would like to see graph data.
->Inside `view` you could define:
->- initial query to show initial data
->- actions that you can use inside this view
->- styling of nodes and relationships
+- build docker image
 
-To see how to create new view visit [views page](Views.md)
-## Main graph viewer
+```
+docker build -t designer-neo4j -f designer-neo4j-backend/docker/neo4j/Dockerfile ./designer-neo4j-backend
+```
 
-`Main graph viewer` is a graph viewer where you can visualise and manipulate graph data.\
-Data that is visualised depends on initial query of the selected view. The action can then add or remove additional data to this view.
+### Designer Quarkus proxy
 
-Nodes and relationships are clickable and movable.\
-When we select the node or the relationship, all actions that can be performed on this element are shown in `contextual action window`.
-#### Style
-The visualisation of the nodes and relationships depends on styling defined in selected view.
-#### Position
-All positions of the nodes is saved for this view automatically. This means, if you rearrange nodes and then reload browser, all positions of nodes will be preserved.
-Positions are preserved even when nodes are being hidden.
+- build jar
 
-## Global actions
+```
+mvn -f designer-quarkus-proxy/pom.xml clean package
+```
 
-Based on the model behind your data (for more information see [model page](Models.md)) inside your view, global actions are automatically created.\
-`Global actions` are actions that are performed on a view, or not for specific node/relationship.\
-Predefined actions are:
+- build docker image
 
-### Create [node]
-This creates new node of type [node]. Types are collected from model behind your data, and for each type new action is created.
+```
+mvn -f designer-quarkus-proxy/pom.xml clean package -Dquarkus.container-image.build=true -Dquarkus.container-image.name=designer-proxy -Dquarkus.container-image.tag=latest -Dquarkus.container-image.group=
+```
 
-![Create action](./docs//images/create_action.png "Create action")
+### Designer React frontend
 
-### Search [node.prop]
-This search for a node with specific property value. Node types as well as properties are collected from model behind your data, and for each pare new action is created.\
-All possible values (when possible) are collected and presented in drop-down menu.
+- build the designer frontend:
 
-![Search action](./docs//images/search_action.png "Search action" ) ![Search action drop-down](./images/search_action_drop.png "Search action drop-down")
+```
+npm i --prefix ./designer-react-frontend
+npm run --prefix ./designer-react-frontend build
+```
 
-### Run Cypher File
+- build docker image:
 
-This method runs the cypher file that we have saved in container. The cypher function need to return specific outputs variables, so it is compatible with our designer.\
-> **NOTE** Need to be added
+```
+docker build -t designer-frontend -f designer-react-frontend/Dockerfile ./designer-react-frontend
+```
 
-### Fine node by UUID
+## Setup & demos
 
-This method find the node with specific UUID. Our Designer create UUID for every node in the NEO4J database. This helps us with transferring actions and models to other users.
-You can see the node UUID inside `Contextual actions view`
+### Setup
 
-### Fine node by type
+When you have built all the required images, move to `docker` directory and first reset the volume by running.
 
-This method search for all nodes by specific type. It is similar to `Search [node.prop]`, but it doesn't filter by any value or properties. Node types are collected from model behind your data.\
+```
+./resetVolume.sh
+```
 
-### Query
+You can then run docker-compose with:
 
-Similar than `Run Cypher File`, but it allows you to put cypher directly inside text box and run it. The cypher function need to return specific outputs variables, so it is compatible with our designer.\
-> **NOTE** Need to be added
->
-### Refresh View
+```
+docker-compose up -d
+```
 
-This function refresh view to a initial query. It removes all additional nodes that was added to a view by actions. \
-This is a great way to restart view to a starting point.
+(if you wish to attach to the docker logs run: `docker-compose logs -f`).
 
-## Contextual actions
+After the containers have successfully, we must now import the metadata into the Neo4j database to make the designer
+functional. Access Neo4j browser on http://localhost:7474
+Username: `neo4j`
+Password: `pass`
 
-This view is connected to a selected element on `Main graph viewer`\
-This view re-renders differently for each element that is selected.\
-It shows details of the selected element and all actions that could be performed on this element.
+Import data into Neo4j by running
 
-It shows:
+```cypher
+CALL apoc.cypher.runFile('file:///main/bios/initBios.cypher')
+```
 
-### Details
-It shows Node or Relationship `UUID` and `label`
+After the scripts have loaded, you can access the graph designer application on  `http://localhost:3000`.
+You now have a graph designer with the basic functionalities to build other projects, if you wish to import some demo projects read the
+following section.
 
-![Details](./docs//images/detail.png "Details")
+### Demos
 
-### Properties
-It show all properties this element has and his values.
+Specific demonstrations for the Graph designer are located in the `demos` directory because the directory is then
+mounted inside the Neo4j docker container. The structure of demos must follow a certain convention to make deployment
+easier.
 
-![Properties](./docs//images/properties.png "Properties")
+Each demo contains a separate directory under `demos` (for example demo movies is located under `demos/movies`).
 
-### Actions
-This is all actions that can be performed on this element
+Cypher files that contain meta structures (metagraph, functions, views ...) can be prepended with
+`metagraph_`, `graphlet_`, `function_`, `job_`, `functionality_`, `style_`, `view_` or `project_` to make use of the
+`custom.designer.import.importFromDirectory` procedure that executes cypher files in the correct order.
 
-> By default, you get those actions from underlying model
+Instructions on how to import data sets and schemas should be provided for each demo.
+For example on how to load the Northwind demo into designer, one would run the following cypher in Neo4j browser:
 
+```cypher
+CALL custom.designer.import.importFromDirectory("demos/northwind");
+CALL apoc.cypher.runSchemaFile("demos/northwind/northwind_schema.cypher");
+CALL apoc.cypher.runFile("demos/northwind/northwind_dataset.cypher");
+```
 
-
-#### Create [node with relationship]
-
-Create neighbour node with specific relationship to it. This helps us quickly create nodes that is valid in our schema (underlying model)\
-For all properties of new element we get automatically form to fill in.
-
-![Create node and relationship](./docs//images/create_action_c.png "Create node and relationship")
-
-#### Edit [properties]
-
-For each property of the selected element, new action to edit these properties is created. The properties are collected from underlying model (schema).
-
-![Edit](./docs//images/edit_prop.png "Edit")
-
-#### Traverse [Relationship]
-
-This action traverse graph by relationship [Relationship]. Relationships are collected from model behind your data (schema), and for each relationship new action is created.
-Traverse show all nodes that has [Relationship] to selected node.
-
-> **NOTE** If you have a super node, and a lot of nodes with [Relationship] to selected node, visualisation could cause node explosion
-
-![Traverse](./docs//images/traverse.png "Traverse")
-
-#### Expand
-
-Expand is a function that will expand all relationships and neighbour nodes from selected node. \
-This method will expand only those relationships that goes from selected node to neighbour node. (selected node is source node for relationship)\
-The same functionality we get with double tap on the node.
-
-> **NOTE** If you have a super node, and a lot of nodes with [Relationship] to selected node, visualisation could cause node explosion
-
-#### Expand Inbound
-This function works the sam way as `Expand` function, but for reverse direction of the relationships.\
-This function will only expand neighbour nodes with relationships directed from neighbour node to selected node (neighbour node is source node for relationship)
-
-#### Collapse
-
-Collapse is reverse function for `Expand`. It hides all nodes that are connected to a selected node, but not selected node.
-
-
-#### Delete
-
-This function delete node or relationship in NEO4J database and hide it on the screen.
-
-#### Edit Style
-
-Edit style will help you edit style for all nodes that are of the same type as selected node.
-You can choose the:
-- color of the element type (node/relationship)
-- icon that is shown on the element of this type
-- size of the node (**node only**)
-- line width (**relationship only**)
-- line style (**relationship only**)
-
-
-
-#### Focus On
-
-Focus on function hides all other element but selected node.
-
-
-#### Hide
-
-This function will hide selected element (node or relationship)
- 
+for more go to Go to [about page](docs/page_one.md)
