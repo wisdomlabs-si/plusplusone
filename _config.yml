@@ -1,0 +1,9 @@
+title: PlusPlusOne
+description: YOUR DESCRIPTION
+theme: just-the-docs
+url: https://wisdomlabs-si.github.io/plusplusone/
+kramdown:
+  math_engine: mathjax
+  syntax_highlighter: rouge
+plugins:
+  - jekyll-default-layout
