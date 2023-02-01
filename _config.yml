@@ -5,6 +5,8 @@ kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
 plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
   - jekyll-default-layout
 
 # Navigation
