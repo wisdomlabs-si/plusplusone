@@ -1,16 +1,8 @@
-title: PlusPlusOne
-description: YOUR DESCRIPTION
 
-url: https://wisdomlabs-si.github.io/plusplusone/
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
-plugins:
-  - jekyll-default-layout
+# Remote Setting
+baseurl: "/wisdomlabs-si"
+# url: ""
 
-# Navigation
-# List links that should appear in the site sidebar here
-navigation:
-  - text: Documentation
-    internal: true
-    url: ./docs
+# Theme
+# theme: "just-the-docs"
+remote_theme: pmarsceill/just-the-docs

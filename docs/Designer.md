@@ -1,5 +1,26 @@
 # Designer
 
+## Idea
+
+The idea behind this designer is to simplify editing of a graph. 
+
+We believe that having the schema of the graph or model that can be interpreted by designer will help as create more intuitive and guided UI.
+
+The main idea is, that designer "understand" the graph - and it can create all functionality base on this knowledge.\
+Because of understanding underlying model of a data, designer could restrict us to be able to add only valid data nad valid actions. 
+
+The main functionality like CRUD operations and traversals are generated automatically because of that. 
+
+All other additional functionality we can add for specific view or for specific type of node or relationship. This functionality will only appear in designer for relevant elements, for all other will remain hidden.
+
+> To use our designer we recommend the following steps:
+> - Create view for editing your model of the data (see [views page](Views.md))
+> - Create model of your data [model page](Models.md)
+> - Create your view for editing data (see [views page](Views.md))
+> - Play with your data
+
+But first let see designer structure and functionality
+
 ## Designer connection 
 
 Designer is connected to a NEO4J database that is deployed with this project in docker container named `designer-neo4j` \
@@ -114,7 +135,7 @@ For all properties of new element we get automatically form to fill in.
 
 #### Edit [properties]
 
-For each property of the selected element, new action to edit this properties is created. The properties are collected from underlying model (schema).
+For each property of the selected element, new action to edit these properties is created. The properties are collected from underlying model (schema).
 
 ![Edit](./images/edit_prop.png "Edit")
 
@@ -125,24 +146,49 @@ Traverse show all nodes that has [Relationship] to selected node.
 
 > **NOTE** If you have a super node, and a lot of nodes with [Relationship] to selected node, visualisation could cause node explosion
 
-This 
-
-#### Collapse
-
-
-#### Delete node
-
-#### Edit Node Style
+![Traverse](./images/traverse.png "Traverse")
 
 #### Expand
 
+Expand is a function that will expand all relationships and neighbour nodes from selected node. \
+This method will expand only those relationships that goes from selected node to neighbour node. (selected node is source node for relationship)\
+The same functionality we get with double tap on the node.
+
+> **NOTE** If you have a super node, and a lot of nodes with [Relationship] to selected node, visualisation could cause node explosion
+
 #### Expand Inbound
+This function works the sam way as `Expand` function, but for reverse direction of the relationships.\
+This function will only expand neighbour nodes with relationships directed from neighbour node to selected node (neighbour node is source node for relationship)
+
+#### Collapse
+
+Collapse is reverse function for `Expand`. It hides all nodes that are connected to a selected node, but not selected node.
+
+
+#### Delete 
+
+This function delete node or relationship in NEO4J database and hide it on the screen.  
+
+#### Edit Style
+
+Edit style will help you edit style for all nodes that are of the same type as selected node. 
+You can choose the:
+- color of the element type (node/relationship)
+- icon that is shown on the element of this type
+- size of the node (**node only**)
+- line width (**relationship only**)
+- line style (**relationship only**)
+
+
 
 #### Focus On
 
+Focus on function hides all other element but selected node. 
+
+
 #### Hide
 
-
+This function will hide selected element (node or relationship)
 
 
 
