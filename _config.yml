@@ -1,10 +1,7 @@
-lsi: false
-safe: true
-source: wisdomlabs-si
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
+title: PlusPlusOne
+description: YOUR DESCRIPTION
+
+url: https://wisdomlabs-si.github.io/plusplusone/
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
