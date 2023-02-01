@@ -18,7 +18,7 @@ You create new view my modeling data in a graph for this we could first look at 
 
 >**NOTE** TO BE EDIT
 
-![view model](imagesiew_meta.png "View model")
+![view model](./images/view_meta.png "View model")
 
 
 ## Creating new view
