@@ -41,7 +41,7 @@ Our designer is structure with four main elements.
 3. Global actions
 4. Contextual actions
 
-![Designer structure](./images/designer_structure.png "Designer structure")
+![Designer structure](./docs/images/designer_structure.png "Designer structure")
 
 ### View selector
 
@@ -74,13 +74,13 @@ Predefined actions are:
 ### Create [node]
 This creates new node of type [node]. Types are collected from model behind your data, and for each type new action is created.
 
-![Create action](./images/create_action.png "Create action")
+![Create action](./docs//images/create_action.png "Create action")
 
 ### Search [node.prop]
 This search for a node with specific property value. Node types as well as properties are collected from model behind your data, and for each pare new action is created.\
 All possible values (when possible) are collected and presented in drop-down menu.
 
-![Search action](./images/search_action.png "Search action" ) ![Search action drop-down](./images/search_action_drop.png "Search action drop-down")
+![Search action](./docs//images/search_action.png "Search action" ) ![Search action drop-down](./images/search_action_drop.png "Search action drop-down")
 
 ### Run Cypher File
 
@@ -117,12 +117,12 @@ It shows:
 ### Details
 It shows Node or Relationship `UUID` and `label`
 
-![Details](./images/detail.png "Details")
+![Details](./docs//images/detail.png "Details")
 
 ### Properties
 It show all properties this element has and his values.
 
-![Properties](./images/properties.png "Properties")
+![Properties](./docs//images/properties.png "Properties")
 
 ### Actions
 This is all actions that can be performed on this element
@@ -136,13 +136,13 @@ This is all actions that can be performed on this element
 Create neighbour node with specific relationship to it. This helps us quickly create nodes that is valid in our schema (underlying model)\
 For all properties of new element we get automatically form to fill in.
 
-![Create node and relationship](./images/create_action_c.png "Create node and relationship")
+![Create node and relationship](./docs//images/create_action_c.png "Create node and relationship")
 
 #### Edit [properties]
 
 For each property of the selected element, new action to edit these properties is created. The properties are collected from underlying model (schema).
 
-![Edit](./images/edit_prop.png "Edit")
+![Edit](./docs//images/edit_prop.png "Edit")
 
 #### Traverse [Relationship]
 
@@ -151,7 +151,7 @@ Traverse show all nodes that has [Relationship] to selected node.
 
 > **NOTE** If you have a super node, and a lot of nodes with [Relationship] to selected node, visualisation could cause node explosion
 
-![Traverse](./images/traverse.png "Traverse")
+![Traverse](./docs//images/traverse.png "Traverse")
 
 #### Expand
 
