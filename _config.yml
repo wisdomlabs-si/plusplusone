@@ -1,8 +1,6 @@
+title: Just the Docs Template
+description: A starter template for a Jeykll site using the Just the Docs theme!
+theme: just-the-docs
 
-# Remote Setting
-baseurl: "/wisdomlabs-si"
-# url: ""
+url: https://plusplusone-documentation.github.io
 
-# Theme
-# theme: "just-the-docs"
-remote_theme: pmarsceill/just-the-docs
