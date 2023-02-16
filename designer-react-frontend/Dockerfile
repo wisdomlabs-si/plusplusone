@@ -4,9 +4,6 @@ RUN apt-get update && apt-get install -y dos2unix
 
 RUN rm -rf /usr/share/nginx/html/*
 ENV API_GRAPH_DESIGNER_SERVICE=http://127.0.0.1:8989/
-ENV KEYCLOAK_CLIENT_ID=graphdesigner
-ENV KEYCLOAK_REALM=kenstack-designer
-ENV KEYCLOAK_URL=http://localhost:8180/auth
 
 COPY conf/nginx.conf /etc/nginx/nginx.conf
 COPY conf/mime.types /etc/nginx/mime.types
