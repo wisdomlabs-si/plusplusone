@@ -14,7 +14,7 @@
         <apoc.version>3.5.0.7</apoc.version>
         <commons-io.version>2.8.0</commons-io.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <mvn.kenstack.cypher.plugin>0.0.31</mvn.kenstack.cypher.plugin>
+        <mvn.kenstack.cypher.plugin>0.0.33</mvn.kenstack.cypher.plugin>
     </properties>
 
     <dependencies>
