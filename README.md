@@ -34,6 +34,24 @@ This will build all the docker images for you and start docker containers.
 
 Alternatively you could build one image after another with below steps:
 
+### If you get kenstack-maven-plugin error
+
+In a case when you get `kenstack-maven-plugin` error and the docker container can't be build:
+- delete `ken` folder inside `.m/repository` file to delete any previous cache
+- inside project run script:
+
+```
+mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=designer-neo4j-backend/maven-plugin/kenstack-cypher-maven-plugin-0.0.33.jar -DgroupId=ken -DartifactId=kenstack-cypher-maven-plugin -Dversion=0.0.33 -Dpackaging=jar  -DgeneratePom=true  -DlocalRepositoryPath=designer-neo4j-backend/local-maven-repo`
+```
+
+This will build local maven plugin again. 
+
+After that, repeat  
+
+```
+make build-all   
+```
+
 ### Designer Neo4j backend:
 
 - build jar
