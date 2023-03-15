@@ -31,7 +31,7 @@ You provide schema of your data by creating model of this data
 
 >**NOTE** TO BE EDIT
 
-![view model](./images/view_meta.png "View model")
+![view model](./images/metaMetagraph.png "View model")
 
 #### Metagraph
 

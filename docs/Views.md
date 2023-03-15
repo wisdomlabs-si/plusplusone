@@ -24,7 +24,7 @@ You create new view my modeling data in a graph for this we could first look at 
 
 >**NOTE** TO BE EDIT
 
-![view model](./images/view_meta.png "View model")
+![view model](./images/viewMetagraph.png "View model")
 
 #### Project
 
