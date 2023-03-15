@@ -1,7 +1,6 @@
 title: Just the Docs Template
 description: A starter template for a Jeykll site using the Just the Docs theme!
-remote_theme: pmarsceill/just-the-docs
-permalink: pretty
+theme: just-the-docs
 
 url: https://plusplusone-documentation.github.io
 
