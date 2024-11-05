@@ -76,7 +76,14 @@ const ActionModal: React.FC<Props> = ({ action, setAction, cy }) => {
     setAction();
   };
 
-  const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyPress = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLElement;
+
+    // Skip handling if the event comes from a textarea
+    if (target instanceof HTMLTextAreaElement) {
+      return;
+    }
+
     if (event.code === "Enter" || event.code === "NumpadEnter") {
       handleUpdate();
     }
@@ -115,7 +122,7 @@ const ActionModal: React.FC<Props> = ({ action, setAction, cy }) => {
       <div
         ref={popover}
         style={{
-          width: 400,
+          width: 800,
           padding: 20,
           background: "var(--color-surface-2)",
           borderRadius: 3,
@@ -125,12 +132,13 @@ const ActionModal: React.FC<Props> = ({ action, setAction, cy }) => {
       >
         <h3 style={{ fontSize: "1.2em" }}>{action.name}</h3>
         {action?.params.map((x) => (
-          <div style={{ width: 250 }} key={x.name}>
+          <div style={{ width: 750 }} key={x.name}>
             <ActionProp
               argsState={argsState}
               setArgsState={setArgsState}
               prop={x}
               action={action}
+              onSubmit={handleUpdate}
               visible={!(action.name === "addRelationship" && x.name === "endNodeUuid")}
               doFocus={x.name == focusPropName}
               defaultValue={
@@ -151,7 +159,7 @@ const ActionModal: React.FC<Props> = ({ action, setAction, cy }) => {
             />
           </div>
         ))}
-        <div style={{ display: "flex", marginTop: 20, width: 190, justifyContent: "space-between" }}>
+        <div style={{ display: "flex", marginTop: 20, width: 490, justifyContent: "end" }}>
           <Button
             disabled={
               (argsState &&

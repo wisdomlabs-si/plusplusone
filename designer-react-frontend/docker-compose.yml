@@ -1,6 +1,7 @@
 version: "3.1"
 services:
   designer-basic-frontend:
+    image: designer-basic-frontend
     container_name: designer-basic-frontend
     build: ./
     ports:
