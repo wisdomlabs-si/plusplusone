@@ -12,9 +12,10 @@ type Props = {
   action: ActionDef;
   doFocus: boolean;
   visible: boolean;
+  onSubmit: () => void;
 };
 
-const ActionProp: React.FC<Props> = ({ prop, defaultValue, argsState, setArgsState, action, doFocus, visible=true }) => {
+const ActionProp: React.FC<Props> = ({ prop, defaultValue, argsState, setArgsState, action, doFocus, visible=true, onSubmit }) => {
   const [value, setValue] = useState(argsState[prop.name] || defaultValue || "");
   const handleUpdate = (value: string | number| boolean) => {
     const tempValue = value;
@@ -44,7 +45,7 @@ const ActionProp: React.FC<Props> = ({ prop, defaultValue, argsState, setArgsSta
         <AutoComplete value={value as string} handleUpdate={handleUpdate} />
       ) : prop.widget === "textField" ? (
         <input
-          style={{ marginLeft: 20, width: 155 }}
+          style={{ marginLeft: 20, width: 255 }}
           type="text"
           placeholder="value"
           value={value}
@@ -56,7 +57,7 @@ const ActionProp: React.FC<Props> = ({ prop, defaultValue, argsState, setArgsSta
         />
       ) : prop.widget === "numberField" ? (
         <input
-          style={{ marginLeft: 20, width: 155, border: "1px solid var(--color-border)" }}
+          style={{ marginLeft: 20, width: 255, border: "1px solid var(--color-border)" }}
           type="number"
           placeholder="0"
           value={value}
@@ -68,13 +69,26 @@ const ActionProp: React.FC<Props> = ({ prop, defaultValue, argsState, setArgsSta
         />
       ) : prop.widget === "textArea" ? (
         <textarea
-          style={{ marginLeft: 20, width: 155 }}
-          rows={5}
+          style={{ marginLeft: 20, width: 650 }}
+          rows={10}
           placeholder="value"
           value={value}
           onChange={(e) => {
             setValue(e.target.value);
             handleUpdate(e.target.value);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              if (e.shiftKey) {
+                // Allow new line with Shift+Enter
+                return;
+              } else {
+                // Regular Enter submits
+                e.preventDefault();
+                e.stopPropagation();
+                onSubmit();
+              }
+            }
           }}
           autoFocus={doFocus}
         />
@@ -92,7 +106,7 @@ const ActionProp: React.FC<Props> = ({ prop, defaultValue, argsState, setArgsSta
         />
         ) :(
         <input
-          style={{ marginLeft: 20, width: 155 }}
+          style={{ marginLeft: 20, width: 255 }}
           type="text"
           placeholder="value"
           value={value}
