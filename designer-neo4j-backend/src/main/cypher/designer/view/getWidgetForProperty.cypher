@@ -16,7 +16,7 @@ WITH CASE
        WHEN prop.name = 'color' THEN {widgetType: 'colorPicker', initValues: []}
        WHEN prop.name = 'query' THEN {widgetType: 'textArea', initValues: []}
        WHEN prop.name = 'lineStyle' THEN {widgetType: 'dropDown', initValues: ['solid', 'dotted', 'dashed']}
-       WHEN prop.name = 'type' AND typeName = 'Typed' THEN {widgetType: 'dropDown', initValues: ['string', 'integer', 'float', 'boolean', 'date', 'datetime', 'localdatetime', 'localtime', 'time', 'duration']}
+       WHEN prop.name = 'type' AND typeName = 'Typed' THEN {widgetType: 'dropDown', initValues: ['string', 'varchar', 'integer', 'float', 'boolean', 'date', 'datetime', 'localdatetime', 'localtime', 'time', 'duration']}
        WHEN prop.name = 'type' AND typeName = 'Widget' THEN {widgetType: 'dropDown', initValues: ['textField', 'textArea', 'checkBox', 'numberField', 'colorPicker', 'dropDown','iconPicker']}
        WHEN toLower(prop.type) = 'string' THEN {widgetType: 'textField', initValues: []}
        WHEN toLower(prop.type) = 'integer' THEN {widgetType: 'numberField', initValues: []}
