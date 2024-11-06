@@ -37,6 +37,12 @@ Alternatively you could build one image after another with below steps:
 ### If you get kenstack-maven-plugin error
 
 In a case when you get `kenstack-maven-plugin` error and the docker container can't be build:
+
+- you probably have problem with GIT LFS as file was saved with Git Large File Storage (LFS) https://git-lfs.com/, so you need to install LFS in place wher you are colning repository  and do 
+```
+git lfs pull
+```
+
 - delete `ken` folder inside `.m/repository` file to delete any previous cache
 - inside project run script:
 

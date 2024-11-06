@@ -31,5 +31,3 @@ build-all:
 	mvn -f designer-neo4j-backend/pom.xml clean package
 	docker build -t designer-neo4j -f designer-neo4j-backend/docker/neo4j/Dockerfile ./designer-neo4j-backend
 
-	docker-compose -f ./docker/docker-compose.yaml up -d
-	docker-compose -f ./docker/docker-compose.yaml logs -f
