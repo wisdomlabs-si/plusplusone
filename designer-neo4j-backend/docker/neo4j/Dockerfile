@@ -1,4 +1,4 @@
-FROM neo4j:4.4.6-community
+FROM neo4j:4.4.41-community
 
 RUN wget https://github.com/wisdomlabs-si/plusplusone/releases/download/v0.0.1/apoc-4.4.0.3-modified-all.jar -P /var/lib/neo4j/plugins/
 RUN wget https://github.com/wisdomlabs-si/plusplusone/releases/download/v0.0.1/kenstack-cypher-project-loader-2.0.0.jar -P /var/lib/neo4j/plugins/

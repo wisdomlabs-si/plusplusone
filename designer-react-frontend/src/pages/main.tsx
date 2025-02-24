@@ -61,7 +61,7 @@ const Main = (): JSX.Element => {
     if (sizes_string) {
        return JSON.parse(sizes_string)
     }
-    return [20, 60, 20] // default sizes
+    return [15, 70, 15] // default sizes
   }
 
   const sizes: number[] | undefined = getSizesForSidebar();

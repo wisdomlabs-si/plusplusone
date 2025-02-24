@@ -11,6 +11,6 @@
 WITH $graphObject AS graphObject
 
 RETURN CASE WHEN apoc.meta.type(graphObject) = 'NODE'
-THEN head([x IN labels(graphObject) WHERE x <> "_Identifiable" | x])
+THEN apoc.text.join(apoc.coll.sort([x IN labels(graphObject) WHERE x <> "_Identifiable" | x]), ', ')
          ELSE type(graphObject)
          END;
