@@ -39,14 +39,14 @@ const NodeHtmLabel = (node: Node): string => {
                     justify-content: safe center;
                     align-items: safe center;
                     width: 100%;
-                    color: white; ${node.color}
+                    color: black; ${node.color}
                 ">
                     <p style="
                         position: absolute;
                         width: 250%;
                         font: 14px helvetica neue, helvetica, arial, sans-serif;
                         font-weight: 900;
-                        -webkit-text-stroke: 0.8px ${node.color};
+                        #-webkit-text-stroke: 0.8px ${node.color};
                     ">
                         ${node.caption ? node.caption : ""}
                     </p>
